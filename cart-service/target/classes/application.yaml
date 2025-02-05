@@ -1,0 +1,16 @@
+server:
+  port: 8082
+hm:
+  swagger:
+    title: 购物车服务接口文档
+    package: com.hmall.cart.controller
+  db:
+    database: hm-cart
+    host: 192.168.150.101 # 数据库主机地址
+    port: 3306 # 数据库端口
+    un: root # 数据库用户名
+    pw: mysql_0720 # 数据库密码
+
+feign:
+  okhttp:
+    enabled: true # 开启OKHttp功能

@@ -1,0 +1,30 @@
+09:08:29:188  INFO 8112 --- [main] com.hmall.cart.CartApplication           : The following 1 profile is active: "local"
+09:08:30:011  INFO 8112 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=09733353-cc3a-3d61-a0e2-c74c0057572d
+09:08:30:245  INFO 8112 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+09:08:30:254  INFO 8112 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+09:08:30:254  INFO 8112 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+09:08:30:363  INFO 8112 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+09:08:30:373  INFO 8112 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1149 ms
+09:08:30:513  INFO 8112 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
+09:08:31:797  INFO 8112 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+09:08:32:079  INFO 8112 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of e3da5635-dab2-44a3-bbdc-557409de7fca
+09:08:32:079  INFO 8112 --- [main] com.alibaba.nacos.common.remote.client   : [e3da5635-dab2-44a3-bbdc-557409de7fca] RpcClient init label, labels = {module=naming, source=sdk}
+09:08:32:080  INFO 8112 --- [main] com.alibaba.nacos.common.remote.client   : [e3da5635-dab2-44a3-bbdc-557409de7fca] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+09:08:32:080  INFO 8112 --- [main] com.alibaba.nacos.common.remote.client   : [e3da5635-dab2-44a3-bbdc-557409de7fca] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+09:08:32:080  INFO 8112 --- [main] com.alibaba.nacos.common.remote.client   : [e3da5635-dab2-44a3-bbdc-557409de7fca] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+09:08:32:081  INFO 8112 --- [main] com.alibaba.nacos.common.remote.client   : [e3da5635-dab2-44a3-bbdc-557409de7fca] Try to connect to server on start up, server: {serverIp = '192.168.150.101', server main port = 8848}
+09:08:32:212  INFO 8112 --- [main] com.alibaba.nacos.common.remote.client   : [e3da5635-dab2-44a3-bbdc-557409de7fca] Success to connect to server [192.168.150.101:8848] on start up, connectionId = 1738311812034_192.168.150.1_58387
+09:08:32:212  INFO 8112 --- [main] com.alibaba.nacos.common.remote.client   : [e3da5635-dab2-44a3-bbdc-557409de7fca] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+09:08:32:212  INFO 8112 --- [main] com.alibaba.nacos.common.remote.client   : [e3da5635-dab2-44a3-bbdc-557409de7fca] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$473/0x000000080047f040
+09:08:32:212  INFO 8112 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [e3da5635-dab2-44a3-bbdc-557409de7fca] Notify connected event to listeners.
+09:08:32:312  INFO 8112 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+09:08:32:343  INFO 8112 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP cart-service 192.168.10.123:8082 register finished
+09:08:32:515  INFO 8112 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+09:08:32:517  INFO 8112 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+09:08:32:533  INFO 8112 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+09:08:32:587  INFO 8112 --- [main] com.hmall.cart.CartApplication           : Started CartApplication in 5.639 seconds (JVM running for 21.23)
+09:08:32:590  INFO 8112 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service, group=DEFAULT_GROUP
+09:08:32:602  INFO 8112 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service.yaml, group=DEFAULT_GROUP
+09:08:32:602  INFO 8112 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service-local.yaml, group=DEFAULT_GROUP
+09:08:32:789  INFO 8112 --- [nacos-grpc-client-executor-7] com.alibaba.nacos.common.remote.client   : [e3da5635-dab2-44a3-bbdc-557409de7fca] Receive server push request, request = NotifySubscriberRequest, requestId = 1
+09:08:32:804  INFO 8112 --- [nacos-grpc-client-executor-7] com.alibaba.nacos.common.remote.client   : [e3da5635-dab2-44a3-bbdc-557409de7fca] Ack server push request, request = NotifySubscriberRequest, requestId = 1
