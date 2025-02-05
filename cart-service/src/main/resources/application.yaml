@@ -1,5 +1,11 @@
 server:
   port: 8082
+spring:
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8090
+      http-method-specify: true # 开启请求方式前缀 请求方式 + 请求路径作为簇点资源名
 hm:
   swagger:
     title: 购物车服务接口文档
