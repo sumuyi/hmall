@@ -11,7 +11,6 @@ import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import org.springframework.web.util.NestedServletException;
 
 import java.net.BindException;
 import java.util.stream.Collectors;
@@ -49,12 +48,13 @@ public class CommonExceptionAdvice {
         return processResponse(new BadRequestException("请求参数格式错误"));
     }
 
-    @ExceptionHandler(NestedServletException.class)
-    public Object handleNestedServletException(NestedServletException e) {
-        log.error("参数异常 -> NestedServletException，{}", e.getMessage());
-        log.debug("", e);
-        return processResponse(new BadRequestException("请求参数处理异常"));
-    }
+    // 注释掉这个异常处理，否则网关服务会报找不到类文件信息错误
+//    @ExceptionHandler(NestedServletException.class)
+//    public Object handleNestedServletException(NestedServletException e) {
+//        log.error("参数异常 -> NestedServletException，{}", e.getMessage());
+//        log.debug("", e);
+//        return processResponse(new BadRequestException("请求参数处理异常"));
+//    }
 
     @ExceptionHandler(Exception.class)
     public Object handleRuntimeException(Exception e) {

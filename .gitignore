@@ -5,6 +5,8 @@
 *.log
 logs/
 *.log.*
+spring.log
+logs/**/*.log
 
 # BlueJ files
 *.ctxt
@@ -34,6 +36,7 @@ replay_pid*
 .project
 .classpath
 .settings/
+vcs.xml
 
 # Build directories
 target/
