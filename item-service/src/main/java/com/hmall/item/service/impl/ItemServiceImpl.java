@@ -1,5 +1,6 @@
 package com.hmall.item.service.impl;
 
+import cn.hutool.core.thread.ThreadUtil;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.hmall.common.exception.BizIllegalException;
 import com.hmall.common.utils.BeanUtils;
@@ -39,6 +40,8 @@ public class ItemServiceImpl extends ServiceImpl<ItemMapper, Item> implements II
 
     @Override
     public List<ItemDTO> queryItemByIds(Collection<Long> ids) {
+        // todo 模拟商品服务业务延迟
+        ThreadUtil.sleep(500);
         return BeanUtils.copyList(listByIds(ids), ItemDTO.class);
     }
 }
