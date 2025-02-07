@@ -80,6 +80,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         } catch (Exception e) {
             throw new RuntimeException("扣款失败，可能是余额不足！", e);
         }
-        log.info("扣款成功");
+        log.info("用户 {} 扣款成功，扣款金额：{}，剩余：{}", user.getUsername(), totalFee, user.getBalance() - totalFee);
     }
 }
