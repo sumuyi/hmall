@@ -1,5 +1,6 @@
 package com.hmall.cart.service.impl;
 
+import cn.hutool.core.thread.ThreadUtil;
 import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -16,6 +17,7 @@ import com.hmall.common.utils.BeanUtils;
 import com.hmall.common.utils.CollUtils;
 import com.hmall.common.utils.UserContext;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -34,6 +36,7 @@ import java.util.stream.Collectors;
  * @author 虎哥
  * @since 2023-05-05
  */
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements ICartService {
@@ -105,6 +108,7 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
 
     @Override
     public void removeByItemIds(Collection<Long> itemIds) {
+        log.error("【{}】开始清空用户【{}】的购物车", Thread.currentThread().getName(), UserContext.getUser());
         // 1.构建删除条件，userId和itemId
         QueryWrapper<Cart> queryWrapper = new QueryWrapper<Cart>();
         queryWrapper.lambda()
